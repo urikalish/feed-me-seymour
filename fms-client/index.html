@@ -1,0 +1,26 @@
+<html ng-app="fmsApp">
+	<head>
+		<title>Feed Me Seymour</title>
+		<meta name="description" content="Feed Me Seymour"/>
+		<link rel="stylesheet" type="text/css" href="css/fms.css"/>
+		<script src="lib/lodash.js"></script>
+		<script src="lib/jquery-2.2.4.min.js"></script>
+		<script src="lib/angular.min.js"></script>
+		<script src="js/fms-main-app.js"></script>
+		<script src="js/fms-consts.js"></script>
+		<script src="js/fms-vars.js"></script>
+		<script src="js/fms-comm-serv.js"></script>
+		<script src="js/fms-main-serv.js"></script>
+		<script src="js/fms-main-ctrl.js"></script>
+	</head>
+	<body ng-controller="fmsCtrl">
+		<div class="fms__main">
+		    <div ng-repeat="item in model.items">
+			    <span>{{item.time}}</span>
+			    <span>{{item.source}}</span>
+			    <span>{{item.text}}</span>
+			    <span>{{item.link}}</span>
+		</div>
+	</body>
+</html>
+
